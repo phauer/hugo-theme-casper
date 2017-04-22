@@ -1162,7 +1162,7 @@ body:not(.post-template) .post-title {
 
 /* Keep images centered, and allow images wider than the main
    text column to break out. */
-.post-content img {
+.post-content img:not(.pswp__img) { /* this breaks hugo-easy-gallery and left-aligns images in lightbox. So exclude class pswp__img */
     display: block;
     max-width: 126%;
     height: auto;
