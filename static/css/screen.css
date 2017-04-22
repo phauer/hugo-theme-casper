@@ -573,6 +573,10 @@ body.nav-opened .site-wrapper {
     overflow: hidden;
 }
 
+.main-header .vertical{
+    text-shadow: 2px 2px #1f4360;
+}
+
 .main-header .inner {
     width: 80%;
 }
@@ -949,7 +953,7 @@ body.nav-opened .menu-button .word {
 
 .page-description {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 1.5em;
     font-weight: 400;
     font-family: "Merriweather", serif;
