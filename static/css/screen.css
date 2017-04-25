@@ -2141,8 +2141,18 @@ body:not(.post-template) .post-title {
   }
 }
 
+.googleMapsContainer {
+  position: relative;
+  padding-bottom: 56%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
 
-/* ==========================================================================
-   End of file. Animations should be the last thing here. Do not add stuff
-   below this point, or it will probably fuck everything up.
-   ========================================================================== */
+.googleMapsContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
