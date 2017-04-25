@@ -320,6 +320,12 @@ p, ul, ol, dl {
     -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     margin: 0 0 1.75em 0;
     text-rendering: geometricPrecision;
+}
+
+section.post-content p,
+section.post-content ul,
+section.post-content ol,
+section.post-content dl {
     text-align: justify;
     letter-spacing: 0.03rem;
     line-height: 1.5;
