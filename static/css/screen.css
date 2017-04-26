@@ -1209,7 +1209,7 @@ body:not(.post-template) .post-title {
     line-height: 1.75em;
     text-align: center;
     margin: 0 auto 1rem;
-    width: 75%;
+    width: 80%;
 }
 
 /* Create some space to the right for the share links */
@@ -2149,4 +2149,18 @@ body:not(.post-template) .post-title {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.featuredImage {
+    border-radius: 25px;
+    max-width: 100%;
+    margin: 15px auto;
+    display: block;
+}
+
+@media (min-width: 650px) {
+    .featuredImage {
+        float: right;
+        margin: 10px 10px 10px 15px;
+    }
 }

@@ -4,12 +4,20 @@
         <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     </header>
     <section class="post-excerpt">
+        {{ $title := .Title -}}
+        {{ $permaLink := .Permalink -}}
+        {{ with .Params.featuredImage }}
+        <a href="{{ $permaLink }}">
+            <img src="{{ . | absURL }}" class="featuredImage" alt="{{ $title }}">
+        </a>
+        {{ end }}
+
         {{if isset .Params "excerpt" }}
             {{ if .Params.excerpt }}
                 <p>{{ .Params.excerpt }} <a class="read-more" href="{{.RelPermalink}}">&raquo;</a></p>
             {{end}}
         {{else}}
-            <p>{{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">&raquo;</a></p>
+            <p>{{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">Weiterlesen &raquo;</a></p>
         {{end}}
     </section>
     <footer class="post-meta">
