@@ -27,3 +27,7 @@
     {{ end }}
 
     {{ partial "pagination.html" $paginator }}
+
+    <footer class="post-footer post-footer-index">
+        {{ partial "author.html" . }}
+    </footer>

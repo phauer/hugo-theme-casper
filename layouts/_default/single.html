@@ -55,20 +55,9 @@
 
 
   <footer class="post-footer">
-
-
-    {{if .Site.Params.authoravatar}}
-    <figure class="author-image">
-        <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{.Site.Params.authoravatar | absURL}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
-    </figure>
-    {{end}}
-
-    {{ partial "author.html" . }}
-
+      {{ partial "author.html" . }}
     {{ partial "share.html" . }}
-
     {{ partial "disqus.html" . }}
-
   </footer>
 </article>
 

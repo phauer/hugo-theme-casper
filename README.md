@@ -10,4 +10,5 @@ Fork of [vjeantet's great hugo-theme-casper](https://github.com/vjeantet/hugo-th
 - clean up document outline (`hn` tags only for content)
 - featured image for each post on index page
 - remove blog logo
+- author bio also on index page
 - to be continued...

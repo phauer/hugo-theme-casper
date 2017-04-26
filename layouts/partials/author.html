@@ -1,3 +1,9 @@
+{{if .Site.Params.authoravatar}}
+<figure class="author-image">
+  <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{.Site.Params.authoravatar | absURL}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
+</figure>
+{{end}}
+
 {{ if not .Params.noauthor }}
 {{$author := index .Site.Data.authors (or .Params.author .Site.Params.author)}}
 {{$authorname := or $author.name .Site.Params.author }}

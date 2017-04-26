@@ -1214,6 +1214,12 @@ body:not(.post-template) .post-title {
 /*}*/
 
 /* The author credit area after the post */
+.post-footer.post-footer-index {
+    width: 80%;
+    max-width: 710px;
+    margin: 70px auto 20px auto;
+}
+
 .post-footer {
     position: relative;
     margin: 6rem 0 0 0;
