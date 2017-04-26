@@ -9,4 +9,5 @@ Fork of [vjeantet's great hugo-theme-casper](https://github.com/vjeantet/hugo-th
 - `google-maps` shortcode and styling.
 - clean up document outline (`hn` tags only for content)
 - featured image for each post on index page
+- remove blog logo
 - to be continued...
