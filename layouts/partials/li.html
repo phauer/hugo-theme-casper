@@ -2,9 +2,11 @@
 <article class="post {{ .Section }} article-excerpt">
     <header class="post-header">
         <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ if not .Date.IsZero }}
         <time class="post-date-excerpt" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
         {{ .Date.Format "2 Jan 2006" }}
         </time>
+        {{end}}
     </header>
     <section class="post-excerpt">
         {{ $title := .Title -}}

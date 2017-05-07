@@ -21,7 +21,9 @@
     <meta property="og:description" content="{{ .Description }}" />
   	<meta property="og:type" content="article" />
     <meta property="article:author" content="{{ .Site.Params.author }}" />
+    {{ if not .Date.IsZero }}
     <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" />
+    {{- end}}
     {{ range .Params.tags }}
     <meta property="article:tag" content="{{ . }}" />
     {{- end }}
@@ -70,6 +72,6 @@
     {{- end}}
     {{- end}}
 </head>
-<body class="nav-closed">
+<body class="nav-closed {{ with .Params.checklist }}checklist{{end}}">
   {{ partial "navigation.html" . }}
  <div class="site-wrapper">
