@@ -1,2 +1,5 @@
 tmp
 .DS_Store
+node_modules
+static/css/styles.css
+static/js/bundle.js

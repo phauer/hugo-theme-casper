@@ -104,58 +104,14 @@ table { border-collapse: collapse; border-spacing: 0; }
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
 
-/* Import the font files */
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans'), local('OpenSans'), url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
-  font-weight: normal; font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
-  font-weight: bold; font-style: normal;
-}
-
-@font-face {
-  font-family: 'Merriweather';
-  src: local('Merriweather Light'), local('Merriweather-Light'), url('../fonts/Merriweather/Merriweather-Light.ttf') format('truetype');
-  font-weight: light; font-style: normal;
-}
-
-@font-face {
-  font-family: 'Merriweather';
-  src: local('Merriweather Light Italic'), local('Merriweather-LightItalic'), url('../fonts/Merriweather/Merriweather-LightItalic.ttf') format('truetype');
-  font-weight: light; font-style: italic;
-}
-
-@font-face {
-  font-family: 'Merriweather';
-  src: local('Merriweather Bold'), local('Merriweather-Bold'), url('../fonts/Merriweather/Merriweather-Bold.ttf') format('truetype');
-  font-weight: bold; font-style: normal;
-}
-
-@font-face {
-  font-family: 'Merriweather';
-  src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'), url('../fonts/Merriweather/Merriweather-BoldItalic.ttf') format('truetype');
-  font-weight: bold; font-style: italic;
-}
-
-@font-face {
-  font-family: 'Inconsolata';
-  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url('../fonts/Inconsolata/Inconsolata-Regular.ttf') format('truetype');
-  font-weight: normal; font-style: normal;
-}
-
-/* Import the font file with the icons in it */
-@font-face {
-  font-family: 'genericons';
-  src: url('../fonts/Genericons/Genericons.eot');
-  src: url('../fonts/Genericons/Genericons.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Genericons/Genericons.woff') format('woff'),
-       url('../fonts/Genericons/Genericons.ttf') format('truetype'),
-       url('../fonts/Genericons/Genericons.svg#entypo') format('svg');
-  font-weight: normal; font-style: normal;
+    font-family: 'genericons';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/genericons/3.1/Genericons.eot');
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/genericons/3.1/Genericons.eot?#iefix') format('embedded-opentype'),
+    url('https://cdnjs.cloudflare.com/ajax/libs/genericons/3.1/Genericons.woff') format('woff'),
+    url('https://cdnjs.cloudflare.com/ajax/libs/genericons/3.1/Genericons.eot') format('truetype'),
+    url('https://cdnjs.cloudflare.com/ajax/libs/genericons/3.1/Genericons.svg#entypo') format('svg');
+    font-weight: normal; font-style: normal;
 }
 
 /* Apply these base styles to all icons */
@@ -414,7 +370,7 @@ mark {
 
 code, tt {
     padding: 1px 3px;
-    font-family: Inconsolata, monospace, sans-serif;
+    font-family: monospace, sans-serif;
     font-size: 0.85em;
     white-space: pre-wrap;
     border: #E3EDF3 1px solid;
@@ -429,7 +385,7 @@ pre {
     border: #E3EDF3 1px solid;
     width: 100%;
     padding: 10px;
-    font-family: Inconsolata, monospace, sans-serif;
+    font-family: monospace, sans-serif;
     font-size: 0.9em;
     white-space: pre;
     overflow: auto;
@@ -961,7 +917,7 @@ body.nav-opened .menu-button .word {
     font-size: 2.5rem;
     line-height: 1.5em;
     font-weight: 400;
-    font-family: "Merriweather", serif;
+    font-family: "Open Sans", sans-serif;
     letter-spacing: 0.01rem;
     color: rgba(255,255,255,0.8);
 }
@@ -1385,7 +1341,7 @@ body:not(.post-template) .post-title {
 /* Location, website, and link */
 .author-profile .author-meta {
     margin: 2rem 0;
-    font-family: "Merriweather", serif;
+  font-family: "Open Sans", sans-serif;
     letter-spacing: 0.01rem;
     font-size: 1.7rem;
 }
