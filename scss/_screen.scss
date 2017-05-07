@@ -2105,21 +2105,23 @@ body:not(.post-template) .post-title {
   }
 }
 
+/* custom styles by phauer (despite the adjustment above) */
+
 .googleMapsContainer {
   position: relative;
   padding-bottom: 56%;
   height: 0;
   overflow: hidden;
   margin-bottom: 25px;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.googleMapsContainer iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
 .featuredImage {
     border-radius: 25px;
@@ -2136,20 +2138,21 @@ body:not(.post-template) .post-title {
     }
 }
 
-
-
-body.checklist section.post-content li:before{
-    content: '✔'; /*\2713   */
-    position: absolute;
-    margin-left: -1.3em;
-    font-weight: bold;
-}
-body.checklist section.post-content ul {
-   padding-left: 20px;
-   margin-left: 20px;
-   text-indent: 2px;
-   list-style: none;
-   list-style-position: outside;
+body.checklist{
+  section.post-content {
+    li:before{
+        content: '✔'; /*\2713   */
+        position: absolute;
+        margin-left: -1.3em;
+        font-weight: bold;
+    }
+    ul {
+       padding-left: 20px;
+       margin-left: 20px;
+       text-indent: 2px;
+       list-style: none;
+    }
+  }
 }
 
 section.post-content img {
@@ -2157,43 +2160,43 @@ section.post-content img {
 }
 
 aside.taxonomies {
-    width: 80%;
-    max-width: 710px;
-    margin: 4rem auto;
-    padding-bottom: 4rem;
-    font-size: 0.9em;
-    line-height: 1.5em;
+  width: 80%;
+  max-width: 710px;
+  margin: 4rem auto;
+  padding-bottom: 4rem;
+  font-size: 0.9em;
+  line-height: 1.5em;
 
-    display: flex !important;
-    flex-flow: row wrap;
-    align-items: flex-start;
-}
-aside.taxonomies > aside{
+  display: flex !important;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  aside {
     flex-grow: 1;
     flex-basis: 0;
     padding: 5px;
-}
-aside.taxonomies > aside.recent-posts{
-    flex-grow: 2;
-    text-indent:-10px;
-    margin-left:10px
-}
-aside.taxonomies a{
-    text-decoration: none;
-    color: #4973A2;
-}
-aside.taxonomies a:hover{
-    color: #2b3a56;
-}
-aside.taxonomies > aside.recent-posts a{
-    display: block;
-}
-aside.taxonomies > aside > p{
-    margin-bottom: 20px;
-    font-size: 1.3em;
-}
-aside.taxonomies > aside > ul{
-    margin: 0 0 0 0;
-    list-style: none;
-    padding: 0px;
+    p {
+      margin-bottom: 20px;
+      font-size: 1.3em;
+    }
+    ul {
+      margin: 0 0 0 0;
+      list-style: none;
+      padding: 0;
+      a {
+        text-decoration: none;
+        color: #4973A2;
+        :hover{
+          color: #2b3a56;
+        }
+      }
+    }
+    &.recent-posts {
+      flex-grow: 2;
+      text-indent:-10px;
+      margin-left:10px;
+      a {
+          display: block;
+      }
+    }
+  }
 }
