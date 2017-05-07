@@ -58,9 +58,12 @@
     {{ partial "share.html" . }}
     {{ partial "disqus.html" . }}
   </footer>
+
 </article>
 
 </main>
+
+      {{ partial "taxonomies.html" . }}
 
 {{if not .Params.hideSuggestions }}
   {{ partial "suggestions.html" . }}

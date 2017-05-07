@@ -1092,6 +1092,7 @@ body:not(.post-template) .post-title {
 
 .article-excerpt h2.post-title {
     margin-bottom: 10px;
+    font-size: 3.6rem;
 }
 
 .article-excerpt .post-date-excerpt {
@@ -2167,7 +2168,7 @@ body:not(.post-template) .post-title {
 .featuredImage {
     border-radius: 25px;
     max-width: 100%;
-    width: 350px;
+    width: 300px;
     margin: 15px auto;
     display: block;
 }
@@ -2197,4 +2198,46 @@ body.checklist section.post-content ul {
 
 section.post-content img {
     max-width: 100%;
+}
+
+aside.taxonomies {
+    width: 80%;
+    max-width: 710px;
+    margin: 4rem auto;
+    padding-bottom: 4rem;
+    font-size: 0.9em;
+    line-height: 1.5em;
+
+    display: flex !important;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+aside.taxonomies > aside{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 5px;
+}
+aside.taxonomies > aside.recent-posts{
+    flex-grow: 2;
+    text-indent:-10px;
+    margin-left:10px
+}
+aside.taxonomies a{
+    text-decoration: none;
+    color: #4973A2;
+}
+aside.taxonomies a:hover{
+    color: #2b3a56;
+}
+aside.taxonomies > aside.recent-posts a{
+    display: block;
+}
+aside.taxonomies > aside > p{
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+aside.taxonomies > aside > ul{
+    margin: 0 0 0 0;
+    list-style: none;
+    padding: 0px;
 }

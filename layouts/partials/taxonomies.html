@@ -1,0 +1,26 @@
+<aside class="taxonomies">
+    <aside class="recent-posts">
+        <p>Aktuelle Beiträge</p>
+        <ul>
+            {{ range first 6 (where .Site.Pages "Section" "post") -}}
+            <li>{{ .Render "link" }}</li>
+            {{ end }}
+        </ul>
+    </aside>
+    <aside >
+        <p>Häufige Tags</p>
+        <ul>
+            {{ range first 12 .Site.Taxonomies.tags.ByCount -}}
+            <li><a href="/tags/{{ .Name | urlize }}/">{{ .Name | humanize }}</a> ({{ .Count }})</li>
+            {{ end }}
+        </ul>
+    </aside>
+    <aside>
+        <p>Länder</p>
+        <ul>
+            {{ range .Site.Taxonomies.countries.ByCount -}}
+            <li><a href="/countries/{{ .Name | urlize }}/">{{ .Name | humanize }}</a> ({{ .Count }})</li>
+            {{ end }}
+        </ul>
+    </aside>
+</aside>
