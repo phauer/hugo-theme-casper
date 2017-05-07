@@ -570,7 +570,7 @@ body.nav-opened .site-wrapper {
     height: 100vh;
     margin-bottom: 5rem;
     text-align: center;
-    background: #222 no-repeat center center;
+    background: #fff no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -1088,7 +1088,7 @@ body:not(.post-template) .post-title {
 }
 
 .article-excerpt h2.post-title {
-    margin-bottom: 2px;
+    margin-bottom: 10px;
 }
 
 .article-excerpt .post-date-excerpt {
@@ -2015,7 +2015,7 @@ body:not(.post-template) .post-title {
     position: relative;
     text-align: center;
     color: #fff;
-    background: #222 no-repeat center center;
+    background: #fff no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2166,6 +2166,7 @@ body:not(.post-template) .post-title {
 .featuredImage {
     border-radius: 25px;
     max-width: 100%;
+    width: 350px;
     margin: 15px auto;
     display: block;
 }
@@ -2173,6 +2174,26 @@ body:not(.post-template) .post-title {
 @media (min-width: 650px) {
     .featuredImage {
         float: right;
-        margin: 0 0 10px 15px;
+        margin: 5px 0 10px 15px;
     }
+}
+
+
+
+body.checklist section.post-content li:before{
+    content: '✔'; /*\2713   */
+    position: absolute;
+    margin-left: -1.3em;
+    font-weight: bold;
+}
+body.checklist section.post-content ul {
+   padding-left: 20px;
+   margin-left: 20px;
+   text-indent: 2px;
+   list-style: none;
+   list-style-position: outside;
+}
+
+section.post-content img {
+    max-width: 100%;
 }
