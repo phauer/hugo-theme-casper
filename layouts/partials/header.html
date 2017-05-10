@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }}{{ if .IsHome }} - {{ .Site.Params.subheading }}{{ end }}</title>
     <link rel="canonical" href="{{ .Permalink }}" />
     {{ if .IsPage -}}
     <meta name="description" content="{{ .Description | default (substr .Summary 0 160) }}" />

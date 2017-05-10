@@ -8,18 +8,18 @@
         </ul>
     </aside>
     <aside >
-        <p>Häufige Tags</p>
+        <p>Kategorien</p>
         <ul>
-            {{ range first 12 .Site.Taxonomies.tags.ByCount -}}
-            <li><a href="/tags/{{ .Name | urlize }}/">{{ .Name | humanize }}</a> ({{ .Count }})</li>
+            {{ range first 12 .Site.Taxonomies.kategorien.ByCount -}}
+            <li><a href="/kategorien/{{ .Name | urlize }}/">{{ .Name | humanize }}</a> ({{ .Count }})</li>
             {{ end }}
         </ul>
     </aside>
     <aside>
-        <p>Länder</p>
+        <p>Reiseziele</p>
         <ul>
-            {{ range .Site.Taxonomies.countries.ByCount -}}
-            <li><a href="/countries/{{ .Name | urlize }}/">{{ .Name | humanize }}</a> ({{ .Count }})</li>
+            {{ range .Site.Taxonomies.reiseziele.ByCount -}}
+            <li><a href="/reiseziele/{{ .Name | urlize }}/">{{ .Name | humanize }}</a> ({{ .Count }})</li>
             {{ end }}
         </ul>
     </aside>
