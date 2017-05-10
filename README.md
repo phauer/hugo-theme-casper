@@ -32,8 +32,9 @@ npm run build
 development:
 
 ```bash
-# in theme folder
+# shell in theme folder
 npm run watch
-# in project root
+
+# shell in project root
 hugo server
 ```
