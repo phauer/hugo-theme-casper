@@ -13,18 +13,22 @@
   }
 }
 
-.featuredImage {
-  border-radius: 25px;
-  max-width: 100%;
-  width: 300px;
-  margin: 15px auto;
-  display: block;
-}
-
-@media (min-width: 650px) {
+article.article-excerpt {
   .featuredImage {
-    float: right;
-    margin: 5px 0 10px 15px;
+    border-radius: 25px;
+    max-width: 100%;
+    width: 300px;
+    margin: 15px auto;
+    display: block;
+  }
+  @media (min-width: 650px) {
+    .featuredImage {
+      float: right;
+      margin: 5px 0 10px 15px;
+    }
+  }
+  footer {
+    clear: both;
   }
 }
 
