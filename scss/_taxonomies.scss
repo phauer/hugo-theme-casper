@@ -1,0 +1,41 @@
+aside.taxonomies {
+  width: 80%;
+  max-width: 710px;
+  margin: 4rem auto;
+  padding-bottom: 4rem;
+  font-size: 0.9em;
+  line-height: 1.5em;
+
+  display: flex !important;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  aside {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 5px;
+    p {
+      margin-bottom: 20px;
+      font-size: 1.3em;
+    }
+    ul {
+      margin: 0 0 0 0;
+      list-style: none;
+      padding: 0;
+      a {
+        text-decoration: none;
+        color: #4973A2;
+        :hover{
+          color: #2b3a56;
+        }
+      }
+    }
+    &.recent-posts {
+      flex-grow: 2;
+      text-indent:-10px;
+      margin-left:10px;
+      a {
+        display: block;
+      }
+    }
+  }
+}
