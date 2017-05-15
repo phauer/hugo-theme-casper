@@ -8,13 +8,13 @@
             Serie <a href="/serien/{{ $key | urlize }}/">
                 {{ $key }}</a>:
         </p>
-        <ul>
+        <ol>
         {{ range sort $taxonomy.Pages "Date" }}
-        <li>
-            <a href="{{ .RelPermalink }}" class="{{ if eq .Permalink $currentURL }}current{{ end }}"> {{ .LinkTitle }} </a>
-        </li>
+            <li>
+                <a href="{{ .RelPermalink }}" class="{{ if eq .Permalink $currentURL }}current{{ end }}"> {{ .LinkTitle }} </a>
+            </li>
         {{ end }}
-    </ul>
+        </ol>
     {{ end }}
     {{ end }}
 </nav>
