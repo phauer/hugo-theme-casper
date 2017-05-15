@@ -11,7 +11,7 @@
         <p>Kategorien</p>
         <ul>
             {{ range first 12 .Site.Taxonomies.kategorien.ByCount -}}
-            <li><a href="/kategorien/{{ .Name | urlize }}/">{{ .Name | humanize }}</a> ({{ .Count }})</li>
+            <li><a href="/kategorien/{{ .Name | urlize }}/">{{ .Name }}</a> ({{ .Count }})</li>
             {{ end }}
         </ul>
     </aside>
@@ -19,7 +19,15 @@
         <p>Reiseziele</p>
         <ul>
             {{ range .Site.Taxonomies.reiseziele.ByCount -}}
-            <li><a href="/reiseziele/{{ .Name | urlize }}/">{{ .Name | humanize }}</a> ({{ .Count }})</li>
+            <li><a href="/reiseziele/{{ .Name | urlize }}/">{{ .Name }}</a> ({{ .Count }})</li>
+            {{ end }}
+        </ul>
+    </aside>
+        <aside>
+        <p>Serien</p>
+        <ul>
+            {{ range .Site.Taxonomies.serien.ByCount -}}
+            <li><a href="/serien/{{ .Name | urlize }}/">{{ .Name }}</a> ({{ .Count }})</li>
             {{ end }}
         </ul>
     </aside>
