@@ -1,0 +1,21 @@
+{{ $currentSeries := .Params.serien }}
+{{ if $currentSeries }}
+<nav id="seriesToc">
+    {{ $currentURL := .Permalink }}
+    {{ range $key, $taxonomy := .Site.Taxonomies.serien }}
+    {{ if eq $key $currentSeries }}
+        <p class="seriesName">
+            Serie <a href="/serien/{{ $key | urlize }}/">
+                {{ $key }}</a>:
+        </p>
+        <ul>
+        {{ range sort $taxonomy.Pages "Date" }}
+        <li>
+            <a href="{{ .RelPermalink }}" class="{{ if eq .Permalink $currentURL }}current{{ end }}"> {{ .LinkTitle }} </a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+    {{ end }}
+</nav>
+{{ end }}

@@ -19,6 +19,7 @@ Fork of [vjeantet's great hugo-theme-casper](https://github.com/vjeantet/hugo-th
 - featured image for each post on index page
 - remove blog logo
 - author bio also on index page
+- series-box at the beginning the post
 - to be continued...
 
 # Build

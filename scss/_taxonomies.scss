@@ -1,3 +1,4 @@
+@import "common";
 aside.taxonomies {
   width: 80%;
   max-width: 710px;
@@ -23,9 +24,9 @@ aside.taxonomies {
       padding: 0;
       a {
         text-decoration: none;
-        color: #4973A2;
-        :hover{
-          color: #2b3a56;
+        color: $link-blue;
+        &:hover{
+          color: $link-blue-hover;
         }
       }
     }
@@ -35,6 +36,57 @@ aside.taxonomies {
       margin-left:10px;
       a {
         display: block;
+      }
+    }
+  }
+}
+nav#seriesToc {
+  $padding-left: 15px;
+  font-size: 90%;
+  margin: 20px 10px 20px 10px;
+  border: 1px solid $border-gray;
+  border-radius: 20px;
+  line-height: 14px;
+
+  padding: 15px 0 15px 0px;
+  p {
+    padding-left: $padding-left;
+    margin: 0 0 10px 0;
+    &.seriesName{
+      font-size: 120%;
+      margin: 0 0 20px 0;
+    }
+    a {
+      color: $link-blue;
+      text-decoration: none;
+      &:hover {
+        color: $link-blue-hover;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0 0 0 0px;
+    margin: 5px 0 0 0;
+    line-height: 14px;
+    li {
+      padding: 7px 10px 7px $padding-left;
+      margin: 0px;
+      &:hover {
+        background-color: $border-gray;
+      }
+      a {
+        display: block;
+        &.current {
+          font-style: italic;
+        }
+        color: $link-blue;
+        text-decoration: none;
+        margin: 0px;
+        padding: 0px;
+        &:hover {
+          color: $link-blue-hover;
+        }
       }
     }
   }
