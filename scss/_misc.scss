@@ -56,3 +56,7 @@ section.post-content img {
 div#disqus_thread {
   margin-top: 40px;
 }
+
+section.post-content figcaption p{
+  text-align: center; //don't justify
+}
