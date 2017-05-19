@@ -45,17 +45,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
     {{- end}}
-
-    {{ if .Site.Params.RSSLink}}
-        <link href="{{.Site.Params.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{else}}
-      {{ if ne .URL "/" }}
-          <link href="{{ "index.xml" | relURL}}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-      {{-  end }}
-      {{if .IsNode}}
-        <link href="{{.RSSLink}}" rel="alternate" type="application/rss+xml" title="{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}" />
-      {{- end}}
-    {{- end}}
+    <link href="{{ "index.xml" | relURL}}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{.Hugo.Generator}}
     {{ if not (in (printf "%v" $.Site.BaseURL) "localhost") -}}
     {{with  .Site.Params.googleAnalyticsUserID -}}
