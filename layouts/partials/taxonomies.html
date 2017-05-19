@@ -1,12 +1,4 @@
 <aside class="taxonomies">
-    <aside class="recent-posts">
-        <p>Aktuelle Beiträge</p>
-        <ul>
-            {{ range first 6 (where .Site.Pages "Section" "post") -}}
-            <li>{{ .Render "link" }}</li>
-            {{ end }}
-        </ul>
-    </aside>
     <aside >
         <p>Kategorien</p>
         <ul>
