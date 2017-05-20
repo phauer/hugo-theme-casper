@@ -1,0 +1,26 @@
+{{ if not (in (printf "%v" $.Site.BaseURL) "localhost") -}}
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+    window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#ffffff",
+                    "text": "#4a4a4a"
+                },
+                "button": {
+                    "background": "#4a4a4a",
+                    "text": "#ffffff"
+                }
+            },
+            "theme": "classic",
+            "content": {
+                "message": "Wir setzen Cookies sein.",
+                "dismiss": "Ist OK",
+                "link": "Details.",
+                "href": "https://deinreisegefaehrte.de/page/impressum-datenschutz/"
+            }
+        })});
+</script>
+{{- end }}
