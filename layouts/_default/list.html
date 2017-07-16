@@ -27,16 +27,22 @@
     <div class="vertical">
         <div class="main-header-content inner">
             <h1 class="page-title">{{.Title}}</h1>
+            {{if .Params.description}}
             <h2 class="page-description">
-                {{if .Params.description}}
-                    {{.Params.description}}
-                {{end}}
+                {{.Params.description}}
             </h2>
+            {{end}}
         </div>
     </div>
 </header>
 
 <main class="content" role="main">
+    {{if .Content }}
+    <div class="post taxonomy-abstract">
+        {{ .Content }}
+    </div>
+    {{end}}
+
     {{ $paginator := .Paginator }}
 
 	<div class="extra-pagination inner">

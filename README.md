@@ -20,6 +20,7 @@ Fork of [vjeantet's great hugo-theme-casper](https://github.com/vjeantet/hugo-th
 - remove blog logo
 - author bio also on index page
 - series-box at the beginning the post
+- better support for custom content in taxonomy list pages.
 - to be continued...
 
 # Build
