@@ -535,10 +535,6 @@ body.nav-opened .site-wrapper {
     overflow: hidden;
 }
 
-.main-header .vertical{
-    text-shadow: 2px 2px #1f4360;
-}
-
 .main-header .inner {
     width: 80%;
 }
@@ -880,12 +876,16 @@ body.nav-opened .menu-button .word {
 
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
-    margin: 10px 0 10px 0;
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
-    color: #fff;
+
+    color: #4a4a4a;
+    background: rgba(255,255,255,0.75);
+    border-radius: 10px;
+    margin: 0px;
+    padding: 10px 20px 10px 20px;
 }
 
 .page-description {
@@ -895,7 +895,8 @@ body.nav-opened .menu-button .word {
     font-weight: 400;
     font-family: "Open Sans", sans-serif;
     letter-spacing: 0.01rem;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.9);
+    text-shadow: 1px 1px #4a4a4a;
 }
 
 .no-cover.main-header {
