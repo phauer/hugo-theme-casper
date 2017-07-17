@@ -13,9 +13,16 @@
 <section class="author">
   <p class="author-name">{{$authorname}}</p>
   {{if $authorbio}}
-  <p>{{$authorbio}}</p>
+  <p>{{$authorbio}}
+    {{ with .Site.Params.mail -}}
+    <a href="mailto:{{.}}" onmouseover="this.href=this.href.replace(/x/g,'');">
+      <img class="mail-icon" src="/images/icon-mail.png"/>
+    </a>
+    {{- end }}
+  </p>
   {{else}}
   <p>Read <a href="{{.Site.BaseURL}}/">more posts</a> by this author.</p>
   {{end}}
+
 </section>
 {{end}}
