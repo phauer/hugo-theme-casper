@@ -488,7 +488,7 @@ table.plain tbody > tr:nth-child(odd) > th {
 .inner {
     position: relative;
     width: 80%;
-    max-width: 710px;
+    max-width: $max-width;
     margin: 0 auto;
 }
 
@@ -936,10 +936,9 @@ body.nav-opened .menu-button .word {
 .post {
     position: relative;
     width: 80%;
-    max-width: 710px;
+    max-width: $max-width;
     margin: 4rem auto;
     padding-bottom: 2rem;
-    border-bottom: $border-gray 1px solid;
     word-wrap: break-word;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
@@ -947,21 +946,11 @@ body.nav-opened .menu-button .word {
     hyphens: auto;
 }
 
-/* Add a little circle in the middle of the border-bottom on our .post
-   just for the lolz and stylepoints. */
-.post:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #E7EEF2 1px solid;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #FFF;
-    border-radius: 100%;
-    box-shadow: #FFF 0 0 0 5px;
+.article-excerpt {
+    @extend .stylish-border;
+    &:after {
+        @extend .stylish-circle-on-border;
+    }
 }
 
 body:not(.post-template) .post-title {
@@ -1141,28 +1130,31 @@ body:not(.post-template) .post-title {
 /* The author credit area after the post */
 .post-footer.post-footer-index {
     width: 80%;
-    max-width: 710px;
+    max-width: $max-width;
     margin: 70px auto 20px auto;
 }
 
 .post-footer {
+    @extend .stylish-border;
     position: relative;
-    margin: 6rem 0 0 0;
-    padding: 6rem 0 0 0;
+    padding: 6rem 0 2.5rem 0;
     border-top: $border-gray 1px solid;
+    max-width: $max-width;
+    margin: 6rem auto;
+    width: 80%;
+    &:after {
+        @extend .stylish-circle-on-border;
+    }
 }
 
 .post-footer p {
     font-size: 1.4rem;
     line-height: 1.75em;
-    text-align: center;
-    margin: 0 auto 1rem;
     width: 80%;
 }
 
-/* Create some space to the right for the share links */
-.post-footer .author {
-    margin: 0 auto;
+.post-footer .author p {
+    margin: 0 auto 1rem;
     text-align: center;
 }
 
@@ -1366,7 +1358,7 @@ body:not(.post-template) .post-title {
 .pagination {
     position: relative;
     width: 80%;
-    max-width: 710px;
+    max-width: $max-width;
     margin: 4rem auto;
     font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
@@ -1689,7 +1681,7 @@ body:not(.post-template) .post-title {
         margin: 2rem auto;
     }
 
-    .post {
+    .post, .post-footer {
         width: auto;
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -1790,6 +1782,7 @@ body:not(.post-template) .post-title {
     }
 
     .post-footer {
+        margin-top: 50px;
         padding: 5rem 0 3rem 0;
         text-align: center;
     }
@@ -1798,6 +1791,9 @@ body:not(.post-template) .post-title {
         margin: 0 0 2rem 0;
         padding: 0 0 1.6rem 0;
         border-bottom: $border-gray 1px dashed;
+        p {
+            width: 100%;
+        }
     }
 
     .post-footer .share {

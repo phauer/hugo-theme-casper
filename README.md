@@ -23,6 +23,10 @@ Fork of [vjeantet's great hugo-theme-casper](https://github.com/vjeantet/hugo-th
 - better support for custom content in taxonomy list pages.
 - to be continued...
 
+## Misc
+
+- Supporting self-hosted and tracking-free [comment-sidecar](https://github.com/phauer/comment-sidecar) instead of Disqus.
+
 # Build
 
 ```bash

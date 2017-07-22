@@ -54,8 +54,14 @@
 	{{ end }}
 
 	{{ partial "pagination.html" $paginator }}
+
 </main>
 
-      {{ partial "taxonomies.html" . }}
+<footer class="post-footer">
+    {{ partial "author.html" . }}
+    {{ partial "comment-sidecar.html" . }}
+</footer>
+
+{{ partial "taxonomies.html" . }}
 
 {{ partial "footer.html" . }}

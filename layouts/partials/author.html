@@ -13,7 +13,8 @@
 <section class="author">
   <p class="author-name">{{$authorname}}</p>
   {{if $authorbio}}
-  <p>{{$authorbio}}
+  <p>
+    {{$authorbio | markdownify }}
     {{ with .Site.Params.mail -}}
     <a href="mailto:{{.}}" onmouseover="this.href=this.href.replace(/x/g,'');">
       <img class="mail-icon" src="/images/icon-mail.png"/>
