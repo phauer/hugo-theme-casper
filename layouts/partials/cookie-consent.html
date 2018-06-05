@@ -1,4 +1,3 @@
-{{ if not (in (printf "%v" $.Site.BaseURL) "localhost") -}}
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 <script>
@@ -16,11 +15,10 @@
             },
             "theme": "classic",
             "content": {
-                "message": "Dein Reisegefährte legt Cookies in deinen Koffer.",
-                "dismiss": "Pack ein!",
-                "link": "Details.",
-                "href": "https://deinreisegefaehrte.de/page/impressum-datenschutz/"
+                "message": "Beim Besuch dieser Webseite werden Informationen gespeichert. Dies erfolgt zu statistischen sowie werbe- und profilingtechnischen Zwecken. Dies ermöglicht uns zu verstehen, was unsere Besucher erwarten und wie wir diese Seite verbessern können.",
+                "dismiss": "OK",
+                "link": "Datenschutzerklärung",
+                "href": "/page/impressum-datenschutz/"
             }
         })});
 </script>
-{{- end }}
