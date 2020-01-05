@@ -7,7 +7,7 @@
         {{ $currentSeriesUrlizedUmlauts := replace $currentSeriesUrlized "%C3%BC" "ü" }}
         {{ if eq $key $currentSeriesUrlizedUmlauts}}
             <p class="seriesName">
-                Serie <a href="/serien/{{ $key }}/">{{ $currentSeries }}</a>:
+                Serie <a href="{{ $taxonomy.Page.RelPermalink }}">{{ $taxonomy.Page.Title }}</a>:
             </p>
             <ol>
             {{ range sort $taxonomy.Pages "Date" }}
