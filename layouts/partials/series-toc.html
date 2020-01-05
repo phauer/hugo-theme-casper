@@ -3,19 +3,19 @@
 <nav id="seriesToc">
     {{ $currentURL := .Permalink }}
     {{ range $key, $taxonomy := .Site.Taxonomies.serien }}
-    {{ if eq $key $currentSeries }}
-        <p class="seriesName">
-            Serie <a href="/serien/{{ $key | urlize }}/">
-                {{ $key }}</a>:
-        </p>
-        <ol>
-        {{ range sort $taxonomy.Pages "Date" }}
-            <li>
-                <a href="{{ .RelPermalink }}" class="{{ if eq .Permalink $currentURL }}current{{ end }}"> {{ .LinkTitle }} </a>
-            </li>
+    {{ $currentSeriesUrlized := $currentSeries | urlize }}
+        {{ if eq $key $currentSeriesUrlized}}
+            <p class="seriesName">
+                Serie <a href="/serien/{{ $key }}/">{{ $currentSeries }}</a>:
+            </p>
+            <ol>
+            {{ range sort $taxonomy.Pages "Date" }}
+                <li>
+                    <a href="{{ .RelPermalink }}" class="{{ if eq .Permalink $currentURL }}current{{ end }}"> {{ .LinkTitle }} </a>
+                </li>
+            {{ end }}
+            </ol>
         {{ end }}
-        </ol>
-    {{ end }}
     {{ end }}
 </nav>
 {{ end }}
