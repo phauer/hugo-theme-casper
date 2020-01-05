@@ -3,8 +3,9 @@
 <nav id="seriesToc">
     {{ $currentURL := .Permalink }}
     {{ range $key, $taxonomy := .Site.Taxonomies.serien }}
-    {{ $currentSeriesUrlized := $currentSeries | urlize }}
-        {{ if eq $key $currentSeriesUrlized}}
+        {{ $currentSeriesUrlized := $currentSeries | urlize }}
+        {{ $currentSeriesUrlizedUmlauts := replace $currentSeriesUrlized "%C3%BC" "ü" }}
+        {{ if eq $key $currentSeriesUrlizedUmlauts}}
             <p class="seriesName">
                 Serie <a href="/serien/{{ $key }}/">{{ $currentSeries }}</a>:
             </p>
