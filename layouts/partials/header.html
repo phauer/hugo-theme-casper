@@ -48,6 +48,7 @@
     <link href="{{ "index.xml" | relURL}}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{.Hugo.Generator}}
     {{ partial "google-analytics.html" . }}
+    {{ partial "google-adsense.html" . }}
 </head>
 <body class="nav-closed {{ with .Params.checklist }}checklist{{end}}">
   {{ partial "navigation.html" . }}
